@@ -1,0 +1,35 @@
+html{
+  font-size: 14px;
+}
+img{
+  background-size: cover;
+}
+.App {
+  text-align: center;
+}
+
+.jumbo{
+  padding: 3em;
+  border: 1px solid gray;
+  background: #fafafa;
+  background-image: url('../src/background.jpg');
+  background-size: cover;
+
+}
+.jumbo h2{
+  font-size: 3rem;
+  color: skyblue;
+}
+.jumbo p {
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
