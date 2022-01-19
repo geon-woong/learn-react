@@ -9,13 +9,7 @@ function NavComponent(){
     return (
         <Nav>
             <Nav.Item>
-                <Nav.Link><Link to="/">Home</Link></Nav.Link>
-            </Nav.Item>
-            
-            <Nav.Item>
-                <Nav.Link eventKey="disabled" disabled>
-                    Disabled
-                </Nav.Link>
+                <Nav.Link as={Link} to="/">Home</Nav.Link>
             </Nav.Item>
         </Nav>
     )

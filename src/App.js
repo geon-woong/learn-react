@@ -5,12 +5,12 @@ import NavComponent from './components/Nav'
 import Detail from './components/Detail'
 import Banner from './components/Banner'
 import { Link, Route, Switch } from 'react-router-dom'
-
+import axios from 'axios'
 
 function App() {
 
 
-  const [shoes, setShoes] = useState(data)
+  let [shoes, setShoes] = useState(data)
 
 
   return (
@@ -28,9 +28,18 @@ function App() {
                   return <Card shoes={shoes[i]} i={i} key={i} ></Card>
                 })
               }
+              <button onClick={
+
+                async()=>{
+                const response = await axios.get('https://codingapple1.github.io/shop/data2.json')
+                setShoes([...shoes, ...response.data])
+                console.log(shoes)
+              }} className="btn btn-primary">more..</button>
+
             </div>
           </div>
         </Route>
+
         <Route path="/detail/:id">
           <Detail shoes={shoes}></Detail>
         </Route>
